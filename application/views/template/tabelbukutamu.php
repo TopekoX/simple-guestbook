@@ -49,11 +49,11 @@
                                                 </td>     
                                                 <td><?php echo $row->bertemu_dengan; ?></td>
                                                 <td><?php echo $row->keperluan; ?></td>
-                                                <td><img src="<?php echo $row->foto; ?>" alt="Foto <?php echo $row->nama; ?>" class="img-thumbnail"></td>
+                                                <td><img src="<?php echo base_url(); ?>uploads/<?php echo $row->foto; ?>" alt="Foto <?php echo $row->nama; ?>" class="img-thumbnail" width=200 height=200></td>
                                                 <td>
                                                     <span class="align-middle">
-                                                        <a href="<?php echo base_url(); ?>" class="btn btn-primary">Ubah</a>
-                                                        <a href="<?php echo base_url(); ?>" class="btn btn-danger">Hapus</a>
+                                                        <a href="<?php echo base_url(); ?>dashboard_bukutamu/update/<?php echo $row->id; ?>" class="btn btn-primary">Ubah</a>
+                                                        <a href="<?php echo base_url(); ?>dashboard_bukutamu/delete/<?php echo $row->id; ?>" onclick="return confirm('Eh... Betul komiu mau hapus? AN: <?php echo $row->nama; ?>')" class="btn btn-danger">Hapus</a>
                                                     </span>
                                                 </td>
                                             </tr>
